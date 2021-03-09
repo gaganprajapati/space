@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>space | home</title>
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+    <script src="js/jquery.js" type="text/javascript"></script>
+    <script src="js/html2canvas.js" type="text/javascript"></script>
+    <script src="js/script.js" type="text/javascript"></script>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<style>
+
+	body{
+		background: #000;
+	}
+
+	.design1 div.des-outer{
+		width:280px;
+		height: 200px;
+		border: 1px solid #ccc;
+		position: absolute;
+		margin: 100px 60px;
+	}
+
+	.design1 div.des-inner{
+		width:150px;
+		height: 150px;
+		border: 1px solid #ccc;
+		position: absolute;
+		margin: 125px 125px;
+	}
+
+	.design1 div.des-inner-2{
+		width: 120px;
+	    height: 60px;
+	    border: 1px solid #ccc;
+	    position: absolute;
+	    margin: 170px 140px;
+	}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes spin-y {
+    from { transform: rotateX(0deg) rotateY(0deg); }
+    to { transform: rotateX(360deg) rotateY(360deg); }
+}
+
+.design1{
+	display: inline-block;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.spin-design {
+    animation: spin 5s infinite linear;
+}
+
+.spin-design-y {
+    animation: spin-y 5s infinite linear;
+}
+
+.des-space{
+    width: 400px;
+    height: 400px;
+    text-align: center;
+    display: inline-block;
+}
+
+.design2{
+	display: inline-block;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.des2{
+	position: absolute;
+	width:40px;
+	height:120px;
+	border:1px solid #ccc;
+	border-top-left-radius: 100%;
+	border-bottom-right-radius: 100%;
+	margin: -10px 30px;
+}
+
+.des-space2{
+	width: 100px;
+    height: 100px;
+    text-align: center;
+    display: inline-block;
+    margin: 100px 200px;
+}
+
+
+.design3{
+	display: inline-block;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+}
+
+.des3{
+	position: absolute;
+	width:120px;
+	height:120px;
+	border:1px solid #ccc;
+	border-radius: 100%;
+}
+
+.des-space3{
+	perspective: 1000px;
+	width: 123px;
+    height: 123px;
+    text-align: center;
+    display: inline-block;
+    margin: 100px 200px;
+}
+
+.design4{
+	display: inline-block;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+}
+
+.des4{
+	position: absolute;
+	width: 60px;
+	height: 60px;
+	border-top-left-radius: 100%;
+	border-bottom-right-radius: 100%;
+	border:1px solid #ccc;
+}
+
+.des-space4{
+	perspective: 1000px;
+	width: 123px;
+    height: 123px;
+    text-align: center;
+    display: inline-block;
+    margin: 100px 200px;
+}
+
+.design5{
+	display: inline-block;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+}
+
+.des5{
+	position: absolute;
+	width: 130px;
+    height: 160px;
+	border-top-left-radius: 100%;
+	border-left: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+}
+
+.des-space5{
+	perspective: 1000px;
+	width: 123px;
+    height: 123px;
+    text-align: center;
+    display: inline-block;
+    margin: 100px 200px;
+}
+
+.design6{
+	display: inline-block;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+}
+
+.des6{
+	position: absolute;
+	width: 60px;
+    height: 160px;
+	border-top-right-radius: 100%;
+	border-left: 1px solid #ccc;
+	border-top: 1px solid #ccc;
+}
+
+.des-space6{
+	perspective: 1000px;
+	width: 123px;
+    height: 123px;
+    text-align: center;
+    display: inline-block;
+    margin: 100px 200px;
+}
+
+
+</style>
+
+<body>
+<div class='des-space'>
+	<div class="design1 spin-design">
+		<script type="text/javascript">
+			$(document).ready(function(){
+				var deg = 0;
+				var designCode = "";
+				for(var i=0; i<15; i++){
+					designCode = designCode + "<div class='des-outer' style='transform: rotate("+deg+"deg);'></div>";
+					deg = deg + 12;
+				}
+				$('.design1').html(designCode);
+
+				var deg = 0;
+				var designCode = "";
+				for(var i=0; i<15; i++){
+					designCode = designCode + "<div class='des-inner' style='transform: rotate("+deg+"deg);'></div>";
+					deg = deg + 12;
+				}
+				$('.design1').html($('.design1').html()+designCode);
+
+				var deg = 0;
+				var designCode = "";
+				for(var i=0; i<10; i++){
+					designCode = designCode + "<div class='des-inner-2' style='transform: rotate("+deg+"deg);'></div>";
+					deg = deg + 18;
+				}
+				$('.design1').html($('.design1').html()+designCode);
+			});
+		</script>
+	</div>
+</div>
+
+
+<div class='des-space2'>
+	<div class="design2 spin-design">
+		<!-- <div style="width:40px; height:120px; border:1px solid #ccc;border-top-left-radius: 100%;"></div> -->
+		<script type="text/javascript">
+			$(document).ready(function(){
+				var deg = 0;
+				var designCode = "";
+				for(var i=0; i<20; i++){
+					designCode = designCode + '<div class="des2" style="transform: rotate('+deg+'deg);"></div>';
+					deg = deg + 18;
+				}
+				$('.design2').html(designCode);
+
+				/*var deg = 0;
+				var designCode = "";
+				for(var i=0; i<15; i++){
+					designCode = designCode + "<div class='des-inner' style='transform: rotate("+deg+"deg);'></div>";
+					deg = deg + 12;
+				}
+				$('.design1').html($('.design1').html()+designCode);
+
+				var deg = 0;
+				var designCode = "";
+				for(var i=0; i<10; i++){
+					designCode = designCode + "<div class='des-inner-2' style='transform: rotate("+deg+"deg);'></div>";
+					deg = deg + 18;
+				}
+				$('.design1').html($('.design1').html()+designCode);*/
+			});
+		</script>
+	</div>
+</div>
+
+
+<div class='des-space3'>
+	<div class="design3 spin-design-y">
+		<!-- <div style="width:40px; height:120px; border:1px solid #ccc;border-top-left-radius: 100%;"></div> -->
+		<script type="text/javascript">
+			$(document).ready(function(){
+				var deg = 0;
+				var designCode = "";
+				for(var i=0; i<30; i++){
+					designCode = designCode + '<div class="des3" style="transform: rotateX('+deg+'deg);"></div>';
+					deg = deg + 10;
+				}
+				$('.design3').html(designCode);
+				var deg = 0;
+				var designCode = "";
+				for(var i=0; i<30; i++){
+					designCode = designCode + '<div class="des3" style="transform: rotateY('+deg+'deg);"></div>';
+					deg = deg + 10;
+				}
+				$('.design3').html($('.design3').html()+designCode);
+			});
+		</script>
+	</div>
+</div>
+
+<div class='des-space4'>
+	<div class="design4 spin-design">
+		<script type="text/javascript">
+			$(document).ready(function(){
+				var deg = 0;
+				var designCode = "";
+				for(var i=0; i<30; i++){
+					designCode = designCode + '<div class="des4" style="transform: rotate('+deg+'deg);"></div>';
+					deg = deg + 12;
+				}
+				$('.design4').html(designCode);
+			});
+		</script>
+	</div>
+</div>
+
+<div class='des-space5'>
+	<div class="design5 spin-design">
+		<script type="text/javascript">
+			$(document).ready(function(){
+				var deg = 0;
+				var designCode = "";
+				for(var i=0; i<30; i++){
+					designCode = designCode + '<div class="des5" style="transform: rotate('+deg+'deg);"></div>';
+					deg = deg + 12;
+				}
+				$('.design5').html(designCode);
+			});
+		</script>
+	</div>
+</div>
+
+<div class='des-space6'>
+	<div class="design6 spin-design">
+		<script type="text/javascript">
+			$(document).ready(function(){
+				var deg = 0;
+				var designCode = "";
+				for(var i=0; i<30; i++){
+					designCode = designCode + '<div class="des6" style="transform: rotate('+deg+'deg);"></div>';
+					deg = deg + 12;
+				}
+				$('.design6').html(designCode);
+			});
+		</script>
+	</div>
+</div>
+
+<!-- <div class="design1">
+	<script type="text/javascript">
+		$(document).ready(function(){
+			var deg = 0;
+			var designCode = "";
+			for(var i=0; i<15; i++){
+				designCode = designCode + "<div class='des-inner' style='transform: rotate("+deg+"deg);'></div>";
+				deg = deg + 12;
+			}
+			$('.design1').html($('.design1').html()+designCode);
+		});
+	</script>
+</div>
+
+<div class="design1">
+	<script type="text/javascript">
+		$(document).ready(function(){
+			var deg = 0;
+			var designCode = "";
+			for(var i=0; i<10; i++){
+				designCode = designCode + "<div class='des-inner-2' style='transform: rotate("+deg+"deg);'></div>";
+				deg = deg + 18;
+			}
+			$('.design1').html($('.design1').html()+designCode);
+		});
+	</script>
+</div> -->
+
+</body>
+
+</html>
