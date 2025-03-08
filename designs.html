@@ -291,15 +291,29 @@
 			$(document).ready(function(){
 				var deg = 0;
 				var designCode = "";
-				for(var i=0; i<30; i++){
+				for(var i=0; i<36; i++){
 					designCode = designCode + '<div class="des3" style="transform: rotateX('+deg+'deg);"></div>';
 					deg = deg + 10;
 				}
 				$('.design3').html(designCode);
 				var deg = 0;
 				var designCode = "";
-				for(var i=0; i<30; i++){
+				for(var i=0; i<36; i++){
 					designCode = designCode + '<div class="des3" style="transform: rotateY('+deg+'deg);"></div>';
+					deg = deg + 10;
+				}
+				$('.design3').html($('.design3').html()+designCode);
+				var deg = 0;
+				var designCode = "";
+				for(var i=0; i<36; i++){
+					designCode = designCode + '<div class="des3" style="transform: rotateX(45deg) rotateY('+deg+'deg);"></div>';
+					deg = deg + 10;
+				}
+				$('.design3').html($('.design3').html()+designCode);
+				var deg = 0;
+				var designCode = "";
+				for(var i=0; i<36; i++){
+					designCode = designCode + '<div class="des3" style="transform: rotateY(45deg) rotateX('+deg+'deg);"></div>';
 					deg = deg + 10;
 				}
 				$('.design3').html($('.design3').html()+designCode);

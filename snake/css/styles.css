@@ -1,0 +1,17 @@
+body{
+	margin: 0;
+	background: #000;
+}
+
+.snake{
+
+}
+
+.segment{
+	width: 20px;
+	height: 20px;
+	background-color: #fff;
+	display: inline-block;
+	position: absolute;
+	transition: 0.5s;
+}
